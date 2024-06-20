@@ -1,12 +1,12 @@
-{% set version = "0.14.1" %}
+{% set version = "0.19.0" %}
 
 package:
   name: fief-client-fastapi
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/fief-client/fief-client-{{ version }}.tar.gz
-  sha256: 36a4affa50508805f863f07e23e00384f4b30b787b60f2162ea4a60f99c6d6b8
+  url: https://pypi.io/packages/source/f/fief-client/fief_client-{{ version }}.tar.gz
+  sha256: 3c310e92d74df9462bbaf0012b90f985f2f351d002d66051b95a95e731c85eb7
 
 build:
   number: 0
