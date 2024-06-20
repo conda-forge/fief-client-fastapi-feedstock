@@ -15,13 +15,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
-    - flit >=3.2,<4
+    - hatchling
   run:
-    - python >=3.7
-    - httpx >=0.21.3,<0.24.0
-    - jwcrypto =1.3.1
+    - python >=3.8
+    - httpx >=0.21.3,<0.28.0
+    - jwcrypto >=1.4,<2.0.0
     - typing_extensions >=4.0.1
     - fastapi
     - makefun >=1.14.0,<2.0.0
