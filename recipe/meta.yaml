@@ -5,21 +5,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/fief-client/fief_client-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/f/fief-client/fief_client-{{ version }}.tar.gz
   sha256: dbfb906d03c4a5402ceac5c843aa4708535fb6f5d5c1c4e263ec06fbbbc434d7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - httpx >=0.21.3,<0.28.0
     - jwcrypto >=1.4,<2.0.0
     - typing_extensions >=4.0.1
@@ -27,6 +27,8 @@ requirements:
     - makefun >=1.14.0,<2.0.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - fief_client
 
